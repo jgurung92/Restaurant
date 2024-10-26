@@ -1,0 +1,279 @@
+/* 
+Author: Jiten Gurung
+Theme: Restaurant Food Order
+Version: 1.0
+*/
+
+/* CSS for all */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    /* border: 1px solid red;  */
+    width: 80%;
+    margin: 0 auto; 
+    padding: 1%;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.img-curved {
+    border-radius: .3rem;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+a {
+    color: #ff6b81;
+    text-decoration: none;  
+}
+
+a:hover {
+    color:#ff4757;
+}
+
+.btn {
+    padding: 2%;
+    border: none;
+    font-size: 1rem;
+    border-radius: .3rem;
+}
+
+.btn-primary {
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    color: white;
+    background-color: #ff4757;
+}
+
+h2 {
+    color: #2f3542;
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: .7%;
+}
+
+.float-container {
+    position: relative;
+}
+
+.float-text {
+    position: absolute;
+    bottom: .3rem;
+    left: 6rem;
+}
+
+/* CSS for navbar section */
+
+.logo {
+    width: 10%; 
+    /* height: 1%; */
+    /* border: 1px solid black;  */
+    float: left; 
+}
+
+.menu {
+    line-height: 90px;
+} 
+
+.menu ul {
+    list-style-type: none; 
+}
+
+.menu ul li {
+    display: inline;  
+    padding: 1%;   
+    font-weight: bold;
+}
+
+/* CSS for food-search section */
+.food-search {
+    /* background-color: #7bed9f;  */
+    background-color: #abebc6; 
+    background-image: url(images/background1.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 40%; 
+    padding: 8%;
+
+}
+
+.food-search input[type="search"] {
+    width: 50%;
+    padding:1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: .3rem;
+}
+
+/* CSS for Categories */
+.categories {
+    padding: 4% 0; 
+}
+
+.box-3 {
+    /* border: 1px solid black; */
+    width: 28%;
+    float: left;
+    margin: 2%;
+}
+
+/* CSS for Food Menu */
+
+.food-menu {
+    background-color: #dfe4ea;
+    padding: 4% 0;
+}
+
+.food-menu-box {
+    /* border: 1px solid black; */
+    width: 43%;
+    margin: 1%;
+    float: left;
+    padding: 2%; 
+    background-color: white;
+    border-radius: .3rem;
+}
+
+.food-menu-img {
+    width: 20%;
+    float: left;
+}
+
+.food-menu-desc {
+    width: 70%; 
+    float: left;
+    margin-left: 8%;
+}
+
+.food-price {
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+
+.food-detail {
+    font-size: 0.8rem;
+    color: #747d8c;
+}
+
+/* CSS for Social  */
+.social ul li {
+    /* border: 1px solid red; */
+    display: inline;
+    padding: 1%;
+}
+
+.footer .container {
+    border-top: 1px solid lightgrey;
+    width: 100%;
+}
+
+.contact-box {
+    /* border: 1px solid ;  */
+    padding: 1%; 
+    line-height: 1.2rem;
+}
+
+
+/*  CSS for screen size */
+@media only screen and (max-width: 768px) {
+    .logo {
+        /* border: 1px solid ; */
+        width: 50%;
+        float: none;
+        margin: 0 auto;    
+    }
+
+    .menu ul {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .food-search input[type="search"] {
+        width: 95%;
+        margin-bottom: 5%;
+        padding: 2%;
+    }
+    .btn {
+        width: 95%;
+        padding: 2%;
+    }
+
+    .food-search {
+        padding: 12% 0;
+    }
+
+    .categories {
+        padding: 12% 0;
+    }
+
+    h2 {
+        margin-bottom: 10%;
+    }
+
+    h3 {
+        padding: 4%;
+    }
+
+    .box-3 {
+        width: 95%;
+        margin: 4% auto;
+    }
+
+    .food-menu {
+        padding: 20% 0;
+        /* margin: 0 1%; */
+
+    }
+
+    .food-menu-box {
+        width: 95%;
+        padding: 5% 2%; 
+        margin-bottom: 5%;
+    }
+
+    .contact-box {
+        /* border: 1px solid ;  */
+        padding: 2%; 
+        line-height: 1.2rem;
+        font-size: .9rem;
+    }
+
+    .footer .container {
+        font-size: .8rem;
+        padding: 4% 0;
+    }
+
+    .social {
+        padding: 1%;
+    }
+}
+    
