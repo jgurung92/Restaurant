@@ -63,4 +63,6 @@
         <!-- Footer Section Ends Starts -->
 
     </body>
+    <?php
+    ?>
 </html>
