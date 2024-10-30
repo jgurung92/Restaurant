@@ -51,9 +51,9 @@
 
         // 1. Get the Data from Form
         $id = $_POST['id'];
-        $current_password = $_POST['current_password'];
-        $new_password = $_POST['new_password'];
-        $confirm_password = $_POST['confirm_password'];
+        $current_password = md5($_POST['current_password']);
+        $new_password = md5($_POST['new_password']);
+        $confirm_password = md5($_POST['confirm_password']);
 
         // 2. Check whether the user with current ID and Current Password Exists or not
         $sql = "SELECT * FROM admin WHERE id = $id AND password = '$current_password'";
@@ -73,10 +73,7 @@
                 if($new_password==$confirm_password) {
                     // Update Password
                     // echo "Password Match";
-                    $sql2 = "UPDATE admin SET
-                        PASSWORD = '$new_password'
-                        WHERE id=$id
-                    ";
+                    $sql2 = "UPDATE admin SET PASSWORD = '$new_password' WHERE id=$id";
 
                     // Execute the Query
                     $result2 = mysqli_query($conn, $sql2);

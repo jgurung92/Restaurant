@@ -10,7 +10,6 @@
         <div class="login">
             <h1 class="text-center">Login </h1><br><br>
 
-            <br><br>
             <?php 
             // Debugging: Check all session variables
             // print_r($_SESSION); 
@@ -18,6 +17,12 @@
                 if (isset($_SESSION['login'])) {
                     echo $_SESSION['login'];
                     unset($_SESSION['login']); 
+                }
+
+                //  Message Session for login failed
+                if (isset($_SESSION['no-login-message'])) {
+                    echo $_SESSION['no-login-message'];
+                    unset($_SESSION['no-login-message']); 
                 }
             ?>
             <br><br>
@@ -43,7 +48,7 @@
         // Process for Login
         //1. Get the Data from Login form 
         $username = $_POST['username'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
 
         //2. SQL to check whether the user with username and password exists or not
         $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
@@ -57,11 +62,13 @@
         if($count==1) {
             // User available and Login Success
             $_SESSION['login'] = "<div class='success'> Login Successful </div>" ;
+            $_SESSION['user'] = $username; //To check the user logged in or not and logout will unset it.
+
             // Redirect to Home Page/Dashboard
-            header('location:'.SITEURL.'admin/login.php');
+            header('location:'.SITEURL.'admin/home.php');
         } else {
-            // User not found
-            $_SESSION['login'] = "<div class='error'> Login Failed </div>" ;
+            // User not not available and Login Fail
+            $_SESSION['login'] = "<div class='error' text-center> Username or Password did not match </div>" ;
             // Redirect to Home Page/Dashboard
             header('location:'.SITEURL.'admin/login.php');
         }

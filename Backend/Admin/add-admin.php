@@ -47,7 +47,7 @@
         //1. Get the data from form
         $full_name = $_POST['full_name'];
         $username = $_POST['username'];
-        $password =$_POST['password']; //md5 will encrypt our password  
+        $password =md5($_POST['password']); //md5 will encrypt our password  
 
         //2. SQL Query to Save the data into database
         $sql = "INSERT INTO admin SET
